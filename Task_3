@@ -1,0 +1,37 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        int bal=50000;//let us assume that the current balance is 50,000
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Select 1 for withdrawal\nSelect 2 for deposit\nSelect 3 for checking the balance");
+        int n=sc.nextInt();
+        if(n==1)
+        {
+            System.out.print("Enter the amount to be withdrawn ");
+            int k=sc.nextInt();
+            if(k<=bal)
+            {
+                System.out.println("The required amount has been withdrawn the current balance is Rs."+(bal-k));
+                bal=k-bal;
+            }
+            else
+            {
+                System.out.println("Insufficient balance ");
+            }
+        }
+        else if (n==2)
+        {
+            System.out.print("Enter the amount to be deposited ");
+            int k=sc.nextInt();
+            System.out.println("The amount has been deposited into your account \n current balance is "+(k+bal));
+            bal=k+bal;
+        }
+        else
+        {
+            System.out.println("The current balance is "+bal);
+        }
+    }
+}
+
