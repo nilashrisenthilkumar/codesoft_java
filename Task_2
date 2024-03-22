@@ -1,0 +1,52 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of subjects");
+        int n=sc.nextInt();
+        int [] m = new int [n];
+        int tot=0;
+        for(int i=0;i<n;i++)
+        {
+            m[i]=sc.nextInt();
+            if(m[i]<0 || m[i]>100)
+            {
+                System.out.println("Invalid Input");
+                return;
+            }
+            tot+=m[i];
+        }
+        System.out.println("Total Marks obtained is "+tot);
+        System.out.println("Average percentage obtained is "+(tot/n));
+        if(tot/n >= 90)
+        {
+            System.out.println("Grade obtained is O ");
+        }
+        else if(tot/n < 90 && tot/n >= 80)
+        {
+            System.out.println("Grade obtained is A+ ");
+        }
+        else if(tot/n < 80 && tot/n >= 70)
+        {
+            System.out.println("Grade obtained is A ");
+        }
+        else if(tot/n < 70 && tot/n >= 60)
+        {
+            System.out.println("Grade obtained is B+ ");
+        }
+        else if(tot/n < 60 && tot/n >= 50)
+        {
+            System.out.println("Grade obtained is B ");
+        }
+        else if(tot/n < 50 && tot/n >= 40)
+        {
+            System.out.println("Grade obtained is C ");
+        }
+        else 
+        {
+            System.out.println("Grade obtained is F ");
+        }
+    }
+}
