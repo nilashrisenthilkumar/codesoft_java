@@ -1,0 +1,31 @@
+import java.util.Random;
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Random r = new Random();
+        int i=r.nextInt(100);
+        int n=250;
+        System.out.println("You have got 10 chances to guess the number correctly...\nLet's Begin....");
+        int s=0;
+        while(n!=i && s<10)
+        {
+            n=sc.nextInt();
+            if(n==i)
+            {
+                System.out.println("Your guess was right and your score is " +(10-s)+"\nTo play again press RUN!!");
+                System.out.println("To play again press run!!");
+            }
+            else if(n>i)
+            {
+                System.out.println("Your guess was higher!");
+                s++;
+            }
+            else 
+            {
+                System.out.println("Your guess was lower!");
+                s++;
+            }
+        }
+    }
+}
